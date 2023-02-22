@@ -9,12 +9,13 @@ app.use(express.json());
 
 //index
 app.use('/', indexRoutes);
+
 //users
 app.use('/users', userRoutes);
 
 // 404 Error route
-app.use((req, res) => {
-    res.status(404).sendFile('./views/404PageNotFound.html', { root: '.' });
+ app.use((req, res) => {
+     res.status(404).sendFile('./views/404PageNotFound.html', { root: '.' });
 });
 
 app.listen(PORT, () => {
