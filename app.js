@@ -1,7 +1,11 @@
 import express from 'express';
-const app = express();
+import dotenv from 'dotenv';
 import indexRoutes from './routes/index.js';
 import userRoutes from './routes/users.js';
+const app = express();
+
+// is storing all the .env variables in this object
+dotenv.config()
 
 const PORT = process.env.PORT || 8080;
 
